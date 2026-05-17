@@ -1,0 +1,318 @@
+
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>2026년 5월 글로벌 전략회의 Open Discussion</title>
+<style>
+  @import url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307@1.1/SCoreDream.css');
+  :root {
+    --bg:#ffffff; --ink:#0a0a0a; --muted:#6b7280; --line:#e5e7eb;
+    --brand:#971B2F; --box:#101820; --row:#fafafa;
+    --shadow:0 1px 2px rgba(0,0,0,.06), 0 6px 20px rgba(0,0,0,.06);
+  }
+  * { box-sizing:border-box; }
+  html, body { height:100%; }
+  body {
+    margin:0; font-family:'SCoreDream','Noto Sans KR',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink); background:linear-gradient(180deg,#fff 0%,#f9fafb 100%);
+  }
+  .container { max-width:980px; margin:0 auto; padding:0 16px 40px; }
+  header {
+    position:relative; padding:32px 0 18px; text-align:center;
+  }
+  header::after {
+    content:""; position:absolute; left:0; right:0; bottom:0; height:4px;
+    background:linear-gradient(90deg,transparent, var(--brand), transparent);
+    opacity:.25;
+  }
+  h1 { margin:0; font-size:34px; font-weight:800; color:var(--brand); letter-spacing:.2px; }
+  .sub { margin-top:10px; font-size:15px; color:var(--muted); }
+  .section { margin-top:24px; background:#fff; border:1px solid var(--line); border-radius:16px; box-shadow:var(--shadow); overflow:hidden; }
+  .section .head { display:flex; align-items:center; justify-content:space-between; padding:14px 16px; background:#fff; border-bottom:1px dashed var(--line); }
+  .section .head .title-sm { font-size:16px; font-weight:800; color:#111; }
+  .section .head .right a {
+    display:inline-block; padding:10px 14px; border-radius:10px; text-decoration:none; color:#101820;
+    background:#fff; border:1px solid #222; font-size:14px; font-weight:600;
+  }
+  .rows { padding:6px; }
+  .row {
+    display:grid; grid-template-columns:64px 1fr auto; gap:14px; align-items:center;
+    padding:16px 12px; border-radius:12px;
+  }
+  .row:not(:last-child) { border-bottom:1px dashed var(--line); }
+  .row:hover { background:var(--row); transform:translateY(-1px); transition:transform .15s ease, background .2s ease; }
+  .badge {
+    width:48px; height:48px; border-radius:12px; border:1px solid var(--line);
+    display:flex; align-items:center; justify-content:center; font-weight:800; color:var(--brand); background:#fff;
+  }
+  .agenda { font-size:13px; color:var(--muted); }
+  h3.title { margin:2px 0 0; font-size:18px; font-weight:700; line-height:1.35; color:#111; }
+  .btn.primary {
+    display:inline-block; padding:10px 16px; border:1px solid var(--brand); border-radius:12px; text-decoration:none;
+    color:#fff; font-size:14px; font-weight:700; background:var(--brand);
+    box-shadow: 0 1px 1px rgba(0,0,0,.08);
+  }
+  .btn.primary:hover { filter:brightness(.96); }
+  /* Spreadsheet box */
+  .sheet-box {
+    margin-top:16px; border-radius:16px; overflow:hidden; border:1px solid var(--line); box-shadow:var(--shadow);
+  }
+  .sheet-top { background:var(--box); color:#fff; padding:18px 16px; display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; }
+  .sheet-title { font-size:16px; font-weight:800; }
+  .sheet-desc { font-size:13px; opacity:.9; margin-top:4px; }
+  .sheet-actions a {
+    display:inline-block; padding:10px 14px; border-radius:10px; text-decoration:none; color:#101820;
+    background:#fff; border:1px solid #222; font-size:14px; font-weight:700;
+  }
+  /* Tabs */
+  .tabs {
+    display:flex; gap:8px; padding:16px; background:#fff; border-bottom:1px solid var(--line);
+  }
+  .tab-btn {
+    flex:1; padding:14px 20px; border:1px solid var(--line); border-radius:12px;
+    background:#fff; color:var(--muted); font-size:15px; font-weight:700;
+    cursor:pointer; transition:all .2s ease; text-align:center;
+  }
+  .tab-btn:hover { background:var(--row); }
+  .tab-btn.active {
+    background:var(--brand); color:#fff; border-color:var(--brand);
+  }
+  .tab-content { display:none; }
+  .tab-content.active { display:block; }
+  @media (max-width:720px) {
+    .row { grid-template-columns:48px 1fr; }
+    .actions { margin-top:8px; }
+    .tabs { flex-direction:column; }
+  }
+  @media print {
+    body { background:#fff; }
+    .container { padding:0; }
+    .section, .sheet-box { box-shadow:none; }
+    .row:hover { transform:none; background:#fff; }
+    a.btn.primary { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>2026년 5월 글로벌 전략회의 Open Discussion</h1>
+      <div class="sub">2026.05.18-19 InBody HQ</div>
+    </header>
+
+    <section class="section" aria-labelledby="agendaListTitle">
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="sales">
+          영업<br><small style="font-size:12px;opacity:0.8;">2026.05.18</small>
+        </button>
+        <button class="tab-btn" data-tab="dev">
+          개발<br><small style="font-size:12px;opacity:0.8;">2026.05.19</small>
+        </button>
+      </div>
+
+      <!-- 영업 탭 (5/18) -->
+      <div id="sales-tab" class="tab-content active">
+        <div class="rows">
+          <article class="row">
+            <div class="badge">01</div>
+            <div class="content">
+              <div class="agenda">안건 1</div>
+              <h3 class="title">’25년 10월 글로벌전략회의 리뷰</h3>
+            </div>
+            <div class="actions">
+              <a class="btn primary" href="https://forms.office.com/r/GKKTvnaTYS" target="_blank" rel="noopener">Forms 열기</a>
+            </div>
+          </article>
+
+          <article class="row">
+            <div class="badge">02</div>
+            <div class="content">
+              <div class="agenda">안건 2</div>
+              <h3 class="title">Odoo 진행상황 및 본사 계획</h3>
+            </div>
+            <div class="actions">
+              <a class="btn primary" href="https://forms.office.com/r/FXG4UsXX3t" target="_blank" rel="noopener">Forms 열기</a>
+            </div>
+          </article>
+
+          <article class="row">
+            <div class="badge">03</div>
+            <div class="content">
+              <div class="agenda">안건 3</div>
+              <h3 class="title">HIMSS 출장 리뷰</h3>
+            </div>
+            <div class="actions">
+              <a class="btn primary" href="https://forms.office.com/r/CK9FPv5VkW" target="_blank" rel="noopener">Forms 열기</a>
+            </div>
+          </article>
+
+          <article class="row">
+            <div class="badge">04</div>
+            <div class="content">
+              <div class="agenda">안건 4</div>
+              <h3 class="title">SECA 대응책 및 파트너사/프랜차이즈 현지 전략 관련 논의</h3>
+            </div>
+            <div class="actions">
+              <a class="btn primary" href="https://forms.office.com/r/WeN2xx3QjC" target="_blank" rel="noopener">Forms 열기</a>
+            </div>
+          </article>
+
+          <article class="row">
+            <div class="badge">05</div>
+            <div class="content">
+              <div class="agenda">안건 5</div>
+              <h3 class="title">InBody x GLP-1</h3>
+            </div>
+            <div class="actions">
+              <a class="btn primary" href="https://forms.office.com/r/t2Rm58eSwg" target="_blank" rel="noopener">Forms 열기</a>
+            </div>
+          </article>
+
+          <article class="row">
+            <div class="badge">06</div>
+            <div class="content">
+              <div class="agenda">안건 6</div>
+              <h3 class="title">영업 지원·세팅 체크리스트</h3>
+            </div>
+            <div class="actions">
+              <a class="btn primary" href="https://forms.office.com/r/Ss2wfnt86p" target="_blank" rel="noopener">Forms 열기</a>
+            </div>
+          </article>
+
+          <article class="row">
+            <div class="badge">07</div>
+            <div class="content">
+              <div class="agenda">안건 7</div>
+              <h3 class="title">글로벌임상파트</h3>
+            </div>
+            <div class="actions">
+              <a class="btn primary" href="https://forms.office.com/r/qK9jaeLTRS" target="_blank" rel="noopener">Forms 열기</a>
+            </div>
+          </article>
+
+          <article class="row">
+            <div class="badge">08</div>
+            <div class="content">
+              <div class="agenda">안건 8</div>
+              <h3 class="title">헬스케어 - 영업</h3>
+            </div>
+            <div class="actions">
+              <a class="btn primary" href="https://forms.office.com/r/AWMbBSABs7" target="_blank" rel="noopener">Forms 열기</a>
+            </div>
+          </article>
+
+          <article class="row">
+            <div class="badge">09</div>
+            <div class="content">
+              <div class="agenda">안건 9</div>
+              <h3 class="title">KOROT - 영업</h3>
+            </div>
+            <div class="actions">
+              <a class="btn primary" href="https://forms.office.com/r/9E8c2AQRhs" target="_blank" rel="noopener">Forms 열기</a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- 개발 탭 (5/19) -->
+      <div id="dev-tab" class="tab-content">
+        <div class="rows">
+          <article class="row">
+            <div class="badge">10</div>
+            <div class="content">
+              <div class="agenda">안건 10</div>
+              <h3 class="title">InBody Like</h3>
+            </div>
+            <div class="actions">
+              <a class="btn primary" href="https://forms.office.com/r/5HULFGvpik" target="_blank" rel="noopener">Forms 열기</a>
+            </div>
+          </article>
+
+          <article class="row">
+            <div class="badge">11</div>
+            <div class="content">
+              <div class="agenda">안건 11</div>
+              <h3 class="title">개발 1그룹</h3>
+            </div>
+            <div class="actions">
+              <a class="btn primary" href="https://forms.office.com/r/S2YVM5QZaA" target="_blank" rel="noopener">Forms 열기</a>
+            </div>
+          </article>
+
+          <article class="row">
+            <div class="badge">12</div>
+            <div class="content">
+              <div class="agenda">안건 12</div>
+              <h3 class="title">개발 2그룹</h3>
+            </div>
+            <div class="actions">
+              <a class="btn primary" href="https://forms.office.com/r/zyDvZQGAWr" target="_blank" rel="noopener">Forms 열기</a>
+            </div>
+          </article>
+
+          <article class="row">
+            <div class="badge">13</div>
+            <div class="content">
+              <div class="agenda">안건 13</div>
+              <h3 class="title">헬스케어 - 개발</h3>
+            </div>
+            <div class="actions">
+              <a class="btn primary" href="https://forms.office.com/r/uPnJ1sQBhh" target="_blank" rel="noopener">Forms 열기</a>
+            </div>
+          </article>
+
+          <article class="row">
+            <div class="badge">14</div>
+            <div class="content">
+              <div class="agenda">안건 14</div>
+              <h3 class="title">KOROT - 개발</h3>
+            </div>
+            <div class="actions">
+              <a class="btn primary" href="https://forms.office.com/r/n2uWSXUSwX" target="_blank" rel="noopener">Forms 열기</a>
+            </div>
+          </article>
+
+          <article class="row">
+            <div class="badge">15</div>
+            <div class="content">
+              <div class="agenda">안건 15</div>
+              <h3 class="title">W</h3>
+            </div>
+            <div class="actions">
+              <a class="btn primary" href="https://forms.office.com/r/Ed61R4At4R" target="_blank" rel="noopener">Forms 열기</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const tabButtons = document.querySelectorAll('.tab-btn');
+
+      tabButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const targetTab = this.getAttribute('data-tab');
+
+          // 모든 탭 버튼 비활성화
+          tabButtons.forEach(btn => btn.classList.remove('active'));
+
+          // 모든 탭 콘텐츠 비활성화
+          document.querySelectorAll('.tab-content').forEach(content => {
+            content.classList.remove('active');
+          });
+
+          // 클릭한 버튼 활성화
+          this.classList.add('active');
+
+          // 해당 탭 콘텐츠 활성화
+          document.getElementById(targetTab + '-tab').classList.add('active');
+        });
+      });
+    });
+  </script>
+</body>
+</html>
